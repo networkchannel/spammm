@@ -33,7 +33,48 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "🤖 Bot Discord en ligne !", 200
+    return """
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>404 - Page non trouvée</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            .container {
+                text-align: center;
+                background: white;
+                padding: 40px;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+            h1 {
+                color: #333;
+                font-size: 48px;
+                margin: 0;
+            }
+            p {
+                color: #666;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>🤷‍♂️</h1>
+            <h1>Rien à voir ici</h1>
+            <p>Cette page n'existe pas ou n'est pas accessible.</p>
+        </div>
+    </body>
+    </html>
+    """, 200
 
 @app.route('/status')
 def status():
