@@ -1,6 +1,11 @@
+import os
+import sys
+
+# Désactive les imports vocaux pour éviter les erreurs sur Render
+sys.modules['audioop'] = None
+
 import discord
 import asyncio
-import os
 from datetime import datetime, timezone
 from flask import Flask
 from threading import Thread
